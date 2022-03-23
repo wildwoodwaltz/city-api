@@ -13,7 +13,7 @@ After cloning  do not forget to `npm i`
 
 ## Architecture
 
-[Node.js v16.14.2](https://nodejs.org/en/), 
+[Node.js v16.14.2](https://nodejs.org/en/),
 [npm v8.3.2](https://docs.npmjs.com/)
 [expressJS](http://expressjs.com/en/4x/api.html)
 
@@ -23,3 +23,38 @@ After cloning  do not forget to `npm i`
 
 ## Credit and Collaborations
 
+## Time Estimates
+
+Name of feature: Server.js
+
+Estimate of time needed to complete: 2 hrs
+
+Start time: 2:00pm
+
+Finish time: 3:15PM
+
+Actual time needed to complete: 1hr 15min
+
+---
+
+Name of feature: Front end modal for weather
+
+Estimate of time needed to complete: 35 min
+
+Start time: 3:15pm
+
+Finish time: 5:20pm
+
+Actual time needed to complete: 2hr 5 min
+
+---
+
+Name of feature: Error Handling
+
+Estimate of time needed to complete: 20 min
+
+Start time: 5:20pm
+
+Finish time: 7:00pm (I made dinner during)
+
+Actual time needed to complete: ???
