@@ -5,7 +5,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-let weatherData = require('./data/weather.json')
+let weatherData = require('./data/weather.json');
 
 //USE
 //Once we have required something, we need to use it. This is where we aaasign the required field variable. REact does this with one step 'import'. Express takes 2 steps. 'require' and use'
@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 
 //define port and vaildate .env
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3002;
 
 //ROUTES
 //we will write endpoints here
@@ -21,41 +21,41 @@ const PORT = process.env.PORT || 3002
 app.get('/weather', (request, response) => {
   try {
     let city= request.query.city;
-    console.log(city)
-    let cityWeather = weatherData.find(location => location.city_name === city)
-    console.log(cityWeather)
+    console.log(city);
+    let cityWeather = weatherData.find(location => location.city_name === city);
+    console.log(cityWeather);
     let weatherDisplay = [];
     cityWeather.data.forEach(date => {
       let forecast = new Forecast(date);
-      weatherDisplay.push(forecast)
-      console.log(weatherDisplay)
-    })
+      weatherDisplay.push(forecast);
+      console.log(weatherDisplay);
+    });
 
-    response.send(weatherDisplay)
+    response.send(weatherDisplay);
 
   } catch (error) {
-    next(error);
+    response.status(500).send(error.message);
   }
 });
 
 app.get('*', (req, res) => {
-  response.send('No such directory');
+  res.send('No such directory');
 });
 
 //ERRORS
 //Handle Errors
-app.use((error, request, response, next) => {
+app.use((error, request, response) => {
   response.status(500).send(error.message);
-})
+});
 
 // Classes
 class Forecast {
   constructor(element) {
-    this.date = element.datetime
-    this.description = element.weather.description
+    this.date = element.datetime;
+    this.description = element.weather.description;
   }
 }
 //LISTEN
 //Start the server
-//Liten is a function that takes in a port value and callback. 
+//Liten is a function that takes in a port value and callback.
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
