@@ -27,14 +27,14 @@ app.get('/weather', async (request, response, next) => {
 
     let cityWeather = await axios.get(url);
 
-    console.log(cityWeather);
+    // console.log(cityWeather);
 
     let weatherDisplay = [];
 
     cityWeather.data.data.forEach(date => {
 
       let forecast = new Forecast(date);
-      console.log(forecast);
+      // console.log(forecast);
       weatherDisplay.push(forecast);
     });
 
@@ -50,17 +50,17 @@ app.get('/movies', async (request, response, next) => {
     let city = request.query.city;
 
     let url = (`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${city}&total_results=3`);
-    console.log(url);
+    // console.log(url);
     let cityMovie = await axios.get(url);
 
-    console.log(cityMovie);
+    // console.log(cityMovie);
 
     let movieDisplay = [];
 
     cityMovie.data.results.forEach(title => {
 
       let movie = new Movie(title);
-      console.log(movie);
+      // console.log(movie);
       movieDisplay.push(movie);
     });
 
