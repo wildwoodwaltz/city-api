@@ -28,7 +28,11 @@ After cloning  do not forget to `npm i`
 
 3-24-2022 12:25PM - Server has been refactored. 
 
+3-25-2022 4:15PM - 
+
 ## Credit and Collaborations
+
+Benjamin Carter -> Thanks for troubleshooting with me. 
 
 ## Time Estimates
 
