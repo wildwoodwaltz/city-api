@@ -17,9 +17,16 @@ After cloning  do not forget to `npm i`
 [npm v8.3.2](https://docs.npmjs.com/)
 [expressJS](http://expressjs.com/en/4x/api.html)
 
+![WRRC](./public/assets/WRRC.png)
+![WRRC2](./public/assets/wrrc2.png)
+![WRRC3](./public/assets/image.png)
+![WRRC4](./public/assets/image.png)
+
 ## Change Log
 
 3-22-2022 12:25PM - Application now has a fully-functional express server
+
+3-24-2022 12:25PM - Server has been refactored. 
 
 ## Credit and Collaborations
 
